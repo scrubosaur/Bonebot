@@ -94,9 +94,6 @@ client.on('guildMemberAdd', async (member) => {
 client.on('messageCreate', async (message) => {
   if (message.author.bot || !message.guild) return;
 
-  if (message.content.toLowerCase().includes('shane')) {
-    await message.channel.send('Shaaehehe-hehe');
-
   const userId = message.author.id;
 
   let count;
