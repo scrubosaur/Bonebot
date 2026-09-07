@@ -5,7 +5,7 @@ module.exports = {
   mongoUri: process.env.MONGO_URI,
 
   // ID du rôle attribué automatiquement à l'arrivée d'un membre
-  welcomeRoleId: 'ID_DU_ROLE_DE_BIENVENUE',
+  welcomeRoleId: '1546357625921339452',
 
   // Affiche un message dans le salon quand un utilisateur monte de rôle
   announceInChannel: true,
@@ -15,18 +15,18 @@ module.exports = {
   roleTiers: [
     {
       messagesRequired: 50,
-      roleId: 'ID_DU_ROLE_NIVEAU_1',
-      previousRoleId: 'ID_DU_ROLE_DE_BIENVENUE',
+      roleId: '1546361911631675493',
+      previousRoleId: '1546357625921339452',
     },
     {
       messagesRequired: 200,
-      roleId: 'ID_DU_ROLE_NIVEAU_2',
-      previousRoleId: 'ID_DU_ROLE_NIVEAU_1',
+      roleId: '1546362041512632360',
+      previousRoleId: '1546361911631675493',
     },
     {
       messagesRequired: 500,
-      roleId: 'ID_DU_ROLE_NIVEAU_3',
-      previousRoleId: 'ID_DU_ROLE_NIVEAU_2',
+      roleId: '1546352025183199322',
+      previousRoleId: '1546362041512632360',
     },
   ],
 };
