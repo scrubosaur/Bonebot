@@ -46,7 +46,7 @@ async function incrementMessageCount(userId) {
     { $inc: { count: 1 } },
     { upsert: true, returnDocument: 'after' }
   );
-  return result.value.count;
+  return result.count;
 }
 
 // Initialise un utilisateur à 0 messages (utilisé à l'arrivée)
