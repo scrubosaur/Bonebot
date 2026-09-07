@@ -126,10 +126,20 @@ client.on('messageCreate', async (message) => {
     await member.roles.add(newRole);
 
     if (config.announceInChannel) {
-      message.channel.send(
-        `🎉 ${member} a atteint **${count} messages** et passe au rôle **${newRole.name}** !`
-      );
+  let targetChannel = message.channel;
+  if (config.announcementChannelId) {
+    const dedicatedChannel = message.guild.channels.cache.get(config.announcementChannelId);
+    if (dedicatedChannel) {
+      targetChannel = dedicatedChannel;
+    } else {
+      console.error('Salon d\'annonces introuvable. Vérifiez announcementChannelId dans config.js');
     }
+  }
+
+  targetChannel.send(
+    `🦴 ${member} a atteint **${count} messages** et passe au rôle **${newRole.name}** ! 🦴`
+  );
+}
   } catch (err) {
     console.error('Erreur lors de la progression de rôle :', err);
   }
