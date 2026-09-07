@@ -9,6 +9,7 @@ module.exports = {
 
   // Affiche un message dans le salon quand un utilisateur monte de rôle
   announceInChannel: true,
+  announcementChannelId: '1366040739405889611',
 
   // Paliers de progression : à chaque seuil de messages, l'utilisateur
   // reçoit un nouveau rôle (et perd optionnellement l'ancien).
